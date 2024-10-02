@@ -15,8 +15,8 @@ const Navbar = () => {
   return (
     <div>
       {/* Navbar for medium and large screens */}
-      <nav className="hidden md:flex w-full py-4 px-6 justify-between items-center border-b border-gray-400">
-        <div className="text-2xl">
+      <nav className="hidden md:flex w-full py-4 px-6 justify-between items-center border-b border-gray-300">
+        <div className="text-3xl italic">
           <GradientText text={"Brainy"} />
         </div>
         <ul className="flex space-x-6">

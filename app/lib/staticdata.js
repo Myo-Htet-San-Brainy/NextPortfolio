@@ -1,3 +1,5 @@
+import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+
 export const navLinks = [
   {
     id: 1,
@@ -20,3 +22,24 @@ export const navLinks = [
     name: "A message to my fellow",
   },
 ];
+
+export const socialLinks = [
+  {
+    id: 1,
+    link: "https://www.facebook.com/myo.h.san.754",
+    Component: FaFacebook,
+  },
+  {
+    id: 2,
+    link: "https://github.com/Myo-Htet-San-Brainy",
+    Component: FaGithub,
+  },
+  {
+    id: 3,
+    link: "https://www.linkedin.com/in/myo-htet-san-brainy-a4b680239/",
+    Component: FaLinkedin,
+  },
+];
+
+export const resumeLink =
+  "https://drive.google.com/file/d/1BpCOPf0rO6hIsBeOQtEbIcPQhH4h_UJK/view?usp=sharing";
