@@ -1,6 +1,9 @@
 import React from "react";
+import { getProjects } from "../lib/dataFetches";
 
-const page = () => {
+const page = async () => {
+  const projects = await getProjects();
+
   return <div>page</div>;
 };
 
