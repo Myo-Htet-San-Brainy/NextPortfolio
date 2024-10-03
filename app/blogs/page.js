@@ -9,7 +9,7 @@ const page = async () => {
   // }
   return (
     <main>
-      <div className="w-[80%] max-w-screen-xl mx-auto pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3 ">
+      <div className="w-[80%] max-w-screen-xl mx-auto py-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3 ">
         {blogs.map((blog) => {
           return <BlogCard key={blog._id} {...blog} />;
         })}

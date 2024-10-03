@@ -1,6 +1,7 @@
 import React from "react";
 import { getMonthDiff } from "../lib/utils/monthDiff";
 import { trimText } from "../lib/utils/trimText";
+import Link from "next/link";
 
 const BlogCard = ({ name, text, img, readTime, createdAt }) => {
   const monthsAgo = getMonthDiff(createdAt);
@@ -22,9 +23,12 @@ const BlogCard = ({ name, text, img, readTime, createdAt }) => {
         <p className="font-light text-lg tracking-wide">
           {trimText(text) ? trimText(text, 200) + " . . ." : text}
         </p>
-        <button className="btn mt-2 text-orange-500 bg-white text-base hover:text-white hover:bg-orange-300 transition-all duration-300 border-none">
+        <Link
+          href={"/"}
+          className="btn mt-2 text-orange-500 bg-white text-base hover:text-white hover:bg-orange-300 transition-all duration-300 border-none"
+        >
           Read More
-        </button>
+        </Link>
       </div>
     </div>
   );

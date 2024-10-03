@@ -16,11 +16,11 @@ export const navLinks = [
     pathname: "/projects",
     name: "Projects",
   },
-  {
-    id: 4,
-    pathname: "/amessagetomyfellow",
-    name: "A message to my fellow",
-  },
+  // {
+  //   id: 4,
+  //   pathname: "/amessagetomyfellow",
+  //   name: "A message to my fellow",
+  // },
 ];
 
 export const socialLinks = [
