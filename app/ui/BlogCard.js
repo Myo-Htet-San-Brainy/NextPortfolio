@@ -3,7 +3,7 @@ import { getMonthDiff } from "../lib/utils/monthDiff";
 import { trimText } from "../lib/utils/trimText";
 import Link from "next/link";
 
-const BlogCard = ({ name, text, img, readTime, createdAt }) => {
+const BlogCard = ({ _id, name, text, img, readTime, createdAt }) => {
   const monthsAgo = getMonthDiff(createdAt);
   return (
     <div className="card w-full bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 bg-orange-400">
@@ -24,7 +24,7 @@ const BlogCard = ({ name, text, img, readTime, createdAt }) => {
           {trimText(text) ? trimText(text, 200) + " . . ." : text}
         </p>
         <Link
-          href={"/"}
+          href={`/blogs/${_id}`}
           className="btn mt-2 text-orange-500 bg-white text-base hover:text-white hover:bg-orange-300 transition-all duration-300 border-none"
         >
           Read More
