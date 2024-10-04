@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { trimText } from "../lib/utils/trimText";
 import Link from "next/link";
 
-const ProjectCard = ({ img, name, text, gitHubLink, siteUrl }) => {
+const ProjectCard = ({ _id, img, name, text, gitHubLink, siteUrl }) => {
   return (
     <div className="card w-full bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 bg-orange-400">
       <figure>
@@ -26,7 +26,7 @@ const ProjectCard = ({ img, name, text, gitHubLink, siteUrl }) => {
         </p>
         <Link
           className="btn mt-2 text-black bg-white text-base hover:text-white hover:bg-orange-300 transition-all duration-300 border-none"
-          href={"/"}
+          href={`/projects/${_id}`}
         >
           Launch Project
         </Link>

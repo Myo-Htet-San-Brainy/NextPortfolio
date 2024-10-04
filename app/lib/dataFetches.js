@@ -23,3 +23,12 @@ export const getProjects = async () => {
   const documents = await projects.find().toArray();
   return documents;
 };
+
+export const getProject = async (projectId) => {
+  const conn = await dbConnect();
+  const projects = conn.connection.db.collection("projects");
+  const project = await projects.findOne({
+    _id: new mongoose.Types.ObjectId(projectId),
+  });
+  return project;
+};
