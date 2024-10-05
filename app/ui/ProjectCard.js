@@ -25,7 +25,7 @@ const ProjectCard = ({ _id, img, name, text, gitHubLink, siteUrl }) => {
           {trimText(text) ? trimText(text) + " . . ." : text}
         </p>
         <Link
-          className="btn mt-2 text-black bg-white text-base hover:text-white hover:bg-orange-300 transition-all duration-300 border-none"
+          className="btn mt-2 text-orange-500 bg-white text-base hover:text-white hover:bg-orange-300 transition-all duration-300 border-none"
           href={`/projects/${_id}`}
         >
           Launch Project

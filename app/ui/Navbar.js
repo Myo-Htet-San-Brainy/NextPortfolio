@@ -4,9 +4,12 @@ import clsx from "clsx";
 import GradientText from "./OgBlueGradientText";
 import { navLinks } from "../lib/staticdata";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const path = usePathname();
+  console.log(path, typeof path);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -26,7 +29,13 @@ const Navbar = () => {
               <li key={id}>
                 <Link
                   href={pathname}
-                  className="text-lg text-orange-400 hover:text-blue-400 transition-all duration-200"
+                  className={clsx(
+                    "text-lg  hover:text-blue-400 transition-all duration-200",
+                    {
+                      "text-black": path === pathname,
+                      "text-orange-400": path !== pathname,
+                    }
+                  )}
                 >
                   {name}
                 </Link>
