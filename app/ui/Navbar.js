@@ -26,7 +26,7 @@ const Navbar = () => {
               <li key={id}>
                 <Link
                   href={pathname}
-                  className="text-orange-400 hover:text-blue-400"
+                  className="text-lg text-orange-400 hover:text-blue-400 transition-all duration-200"
                 >
                   {name}
                 </Link>

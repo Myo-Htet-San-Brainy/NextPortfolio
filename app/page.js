@@ -12,7 +12,7 @@ const Page = () => {
         A passionate software enthusiast focusing on web development
       </h1>
       <a href={resumeLink} target="_blank">
-        <button className="lg:w-2/12 btn bg-gradient-to-r from-blue-400 to-orange-400 rounded-3xl border-none capitalize text-black font-bold tracking-wide hover:text-white">
+        <button className="lg:w-2/12 btn bg-gradient-to-r from-blue-400 to-orange-400 rounded-3xl border-none capitalize  font-bold tracking-wide text-black hover:text-white transition-all duration-200">
           see my resume
         </button>
       </a>

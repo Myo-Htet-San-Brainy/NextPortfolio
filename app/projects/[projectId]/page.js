@@ -3,6 +3,8 @@ import { FaGlobe } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import GradientText from "../../ui/OgBlueGradientText";
 import { getProject } from "../../lib/dataFetches";
+import Breadcrumb from "../../ui/Breadcrumb";
+import { projectDetailsPageBreadcrumbs } from "../../lib/staticdata";
 
 const ProjectDetails = async ({ params }) => {
   const project = await getProject(params.projectId);
@@ -15,6 +17,7 @@ const ProjectDetails = async ({ params }) => {
   return (
     <div className="bg-white py-16">
       <div className="w-4/5 mx-auto max-w-screen-md">
+        <Breadcrumb breadcrumbs={projectDetailsPageBreadcrumbs} />
         <div className="mt-8 text-3xl">
           <GradientText text={name} />
         </div>

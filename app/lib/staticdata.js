@@ -1,10 +1,32 @@
 import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 
+export const projectDetailsPageBreadcrumbs = [
+  {
+    href: "/",
+    displayText: "Home",
+  },
+  {
+    href: "/projects",
+    displayText: "Projects",
+  },
+];
+
+export const blogDetailsPageBreadcrumbs = [
+  {
+    href: "/",
+    displayText: "Home",
+  },
+  {
+    href: "/blogs",
+    displayText: "Blogs",
+  },
+];
+
 export const navLinks = [
   {
     id: 1,
     pathname: "/",
-    name: "About Me",
+    name: "Home",
   },
   {
     id: 2,

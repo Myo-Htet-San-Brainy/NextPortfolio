@@ -13,7 +13,7 @@ const FooterSection = () => {
               key={id}
               href={link}
               target="_blank"
-              className="text-xl text-orange-400 hover:text-blue-400 transition-all duration-200"
+              className="text-2xl text-orange-400 hover:text-blue-400 transition-all duration-200"
             >
               <Component />
             </Link>

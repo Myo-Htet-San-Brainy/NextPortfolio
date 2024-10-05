@@ -1,6 +1,8 @@
 import React from "react";
 import { getBlog } from "../../lib/dataFetches";
 import GradientText from "../../ui/OgBlueGradientText";
+import BreadCrumb from "../../ui/Breadcrumb";
+import { blogDetailsPageBreadcrumbs } from "../../lib/staticdata";
 
 const page = async ({ params }) => {
   const blog = await getBlog(params.blogId);
@@ -14,6 +16,7 @@ const page = async ({ params }) => {
   return (
     <div className="bg-white py-12">
       <div className="w-4/5 mx-auto max-w-screen-md">
+        <BreadCrumb breadcrumbs={blogDetailsPageBreadcrumbs} />
         <div className="mt-8 text-3xl">
           <GradientText text={name} />
         </div>
