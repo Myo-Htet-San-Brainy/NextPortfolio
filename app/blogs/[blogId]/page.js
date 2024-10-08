@@ -3,13 +3,13 @@ import { getBlog } from "../../lib/dataFetches";
 import GradientText from "../../ui/OgBlueGradientText";
 import BreadCrumb from "../../ui/Breadcrumb";
 import { blogDetailsPageBreadcrumbs } from "../../lib/staticdata";
+import { notFound } from "next/navigation";
 
 const page = async ({ params }) => {
   const blog = await getBlog(params.blogId);
 
   if (!blog) {
-    //learn not found and throw not found here
-    return <h1>not found</h1>;
+    notFound();
   }
   const { name, text, img, readTime, monthsAgo } = blog;
 

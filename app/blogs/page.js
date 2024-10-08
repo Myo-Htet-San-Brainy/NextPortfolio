@@ -4,9 +4,15 @@ import BlogCard from "../ui/BlogCard";
 
 const page = async () => {
   const blogs = await getBlogs();
-  // if (blogs.length === 0) {
-  //   return <main>No blogs</main>;
-  // }
+  if (blogs.length === 0) {
+    return (
+      <main className="py-40">
+        <h1 className="text-xl text-center text-orange-400 ">
+          No Blogs For Now
+        </h1>
+      </main>
+    );
+  }
   return (
     <main>
       <div className="w-[80%] max-w-screen-xl mx-auto py-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3 ">

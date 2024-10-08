@@ -5,12 +5,12 @@ import GradientText from "../../ui/OgBlueGradientText";
 import { getProject } from "../../lib/dataFetches";
 import Breadcrumb from "../../ui/Breadcrumb";
 import { projectDetailsPageBreadcrumbs } from "../../lib/staticdata";
+import { notFound } from "next/navigation";
 
 const ProjectDetails = async ({ params }) => {
   const project = await getProject(params.projectId);
   if (!project) {
-    //learn not found and throw not found here
-    return <h1>not found</h1>;
+    notFound();
   }
   const { img, name, text, gitHubLink, siteUrl } = project;
 
