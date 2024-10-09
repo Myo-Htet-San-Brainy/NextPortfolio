@@ -4,6 +4,7 @@ import GradientText from "../../ui/OgBlueGradientText";
 import BreadCrumb from "../../ui/Breadcrumb";
 import { blogDetailsPageBreadcrumbs } from "../../lib/staticdata";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 
 const page = async ({ params }) => {
   const blog = await getBlog(params.blogId);
@@ -26,10 +27,12 @@ const page = async ({ params }) => {
             {monthsAgo === 0 ? "Just moment ago" : `${monthsAgo} months ago`}
           </p>
         </div>
-        <img
+        <Image
           src={img}
-          alt={"Blog image"}
-          className="mt-8 w-3/4 h-64 object-cover rounded-lg"
+          alt={name}
+          className="mt-8 rounded-lg"
+          height={300}
+          width={300}
         />
         <p className="mt-8 text-black font-light text-lg tracking-wide">
           {text}

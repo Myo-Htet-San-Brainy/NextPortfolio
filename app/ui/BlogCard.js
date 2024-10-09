@@ -2,13 +2,15 @@ import React from "react";
 import { getMonthDiff } from "../lib/utils/monthDiff";
 import { trimText } from "../lib/utils/trimText";
 import Link from "next/link";
+import Image from "next/image";
 
 const BlogCard = ({ _id, name, text, img, readTime, createdAt }) => {
   const monthsAgo = getMonthDiff(createdAt);
+
   return (
     <div className="card w-full bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 bg-orange-400">
       <figure>
-        <img src={img} alt={name} />
+        <Image src={img} alt={name} width={500} height={500} />
       </figure>
       <div className="card-body text-white">
         <div className=" flex justify-between text-sm">

@@ -6,6 +6,7 @@ import { getProject } from "../../lib/dataFetches";
 import Breadcrumb from "../../ui/Breadcrumb";
 import { projectDetailsPageBreadcrumbs } from "../../lib/staticdata";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 
 const ProjectDetails = async ({ params }) => {
   const project = await getProject(params.projectId);
@@ -29,10 +30,12 @@ const ProjectDetails = async ({ params }) => {
             <FaGithub className="hover:text-blue-600 transition-all duration-300" />
           </a>
         </div>
-        <img
+        <Image
           src={img}
-          alt={"Project image"}
-          className="mt-8 w-3/4 h-64 object-cover rounded-lg"
+          alt={name}
+          height={300}
+          width={300}
+          className="mt-8 rounded-lg"
         />
         <p className="mt-8 text-black font-light text-lg tracking-wide">
           {text}

@@ -2,12 +2,13 @@ import { FaGlobe } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { trimText } from "../lib/utils/trimText";
 import Link from "next/link";
+import Image from "next/image";
 
 const ProjectCard = ({ _id, img, name, text, gitHubLink, siteUrl }) => {
   return (
     <div className="card w-full bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 bg-orange-400">
       <figure>
-        <img src={img} alt={name} />
+        <Image src={img} alt={name} width={500} height={500} />
       </figure>
       <div className="card-body text-white">
         <div className=" flex justify-between text-2xl">
