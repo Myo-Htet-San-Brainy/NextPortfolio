@@ -1,6 +1,6 @@
 import React from "react";
 import GradientText from "./ui/OgBlueGradientText";
-import { resumeLink } from "./lib/staticdata";
+import { resumeLink } from "./lib/staticData";
 
 const Page = () => {
   return (

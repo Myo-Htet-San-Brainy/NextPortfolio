@@ -17,7 +17,7 @@ export const getBlog = async (blogId) => {
     const conn = await dbConnect();
     const blogs = conn.connection.db.collection("blogs");
     const blog = await blogs.findOne({
-      _id: new mongoose.Types.ObjectId(blogId),
+      _id: mongoose.Types.ObjectId.createFromHexString(blogId),
     });
     return blog;
   } catch (error) {
@@ -41,7 +41,7 @@ export const getProject = async (projectId) => {
     const conn = await dbConnect();
     const projects = conn.connection.db.collection("projects");
     const project = await projects.findOne({
-      _id: new mongoose.Types.ObjectId(projectId),
+      _id: mongoose.Types.ObjectId.createFromHexString(projectId),
     });
     return project;
   } catch (error) {
