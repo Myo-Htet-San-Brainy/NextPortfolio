@@ -4,11 +4,11 @@ import { resumeLink } from "./lib/staticData";
 
 const Page = () => {
   return (
-    <main className="my-32 w-[80%] mx-auto  text-center">
+    <main className=" my-32 w-[80%] mx-auto  text-center">
       <div className="font-bold text-2xl lg:text-5xl mb-7">
         <GradientText text={"Hey, I'm Brainy"} />
       </div>
-      <h1 className="font-light lg:w-[80%] mx-auto text-3xl lg:text-5xl  text-black mb-16 capitalize">
+      <h1 className="font-light lg:w-[80%] mx-auto text-3xl lg:text-5xl  text-base-content mb-16 capitalize">
         A passionate software enthusiast focusing on web development
       </h1>
       <a href={resumeLink} target="_blank">

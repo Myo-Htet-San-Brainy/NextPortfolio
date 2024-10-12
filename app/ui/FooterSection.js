@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const FooterSection = () => {
   return (
-    <footer className="p-14 text-center border-t border-gray-300">
+    <footer className="p-14 text-center border-t border-orange-300">
       <div className="w-fit mx-auto flex space-x-7">
         {socialLinks.map((socialIcon) => {
           const { id, link, Component } = socialIcon;

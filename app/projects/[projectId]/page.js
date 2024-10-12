@@ -16,18 +16,18 @@ const ProjectDetails = async ({ params }) => {
   const { img, name, text, gitHubLink, siteUrl } = project;
 
   return (
-    <div className="bg-white py-16">
+    <div className=" py-16">
       <div className="w-4/5 mx-auto max-w-screen-md">
         <Breadcrumb breadcrumbs={projectDetailsPageBreadcrumbs} />
         <div className="mt-8 text-3xl">
           <GradientText text={name} />
         </div>
-        <div className="mt-8 flex justify-start gap-3 text-2xl">
+        <div className="mt-8 flex justify-start gap-3 text-2xl text-orange-400">
           <a href={siteUrl} target="_blank">
-            <FaGlobe className="hover:text-blue-600 transition-all duration-300" />
+            <FaGlobe className="hover:text-blue-400 transition-all duration-300" />
           </a>
           <a href={gitHubLink} target="_blank">
-            <FaGithub className="hover:text-blue-600 transition-all duration-300" />
+            <FaGithub className="hover:text-blue-400 transition-all duration-300" />
           </a>
         </div>
         <Image
@@ -37,7 +37,7 @@ const ProjectDetails = async ({ params }) => {
           width={300}
           className="mt-8 rounded-lg"
         />
-        <p className="mt-8 text-black font-light text-lg tracking-wide">
+        <p className="mt-8 text-base-content font-light text-lg tracking-wide">
           {text}
         </p>
       </div>
