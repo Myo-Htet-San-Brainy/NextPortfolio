@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import GradientText from "./OgBlueGradientText";
-import { navLinks } from "../lib/staticData";
+import { navLinks } from "../lib/staticData.js";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
