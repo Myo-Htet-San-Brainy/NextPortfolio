@@ -2,7 +2,7 @@ import React from "react";
 import { getBlog } from "../../lib/dataFetches";
 import GradientText from "../../ui/OgBlueGradientText";
 import BreadCrumb from "../../ui/Breadcrumb";
-import { blogDetailsPageBreadcrumbs } from "../../lib/staticData.js";
+import { blogDetailsPageBreadcrumbs } from "../../lib/data.js";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 
