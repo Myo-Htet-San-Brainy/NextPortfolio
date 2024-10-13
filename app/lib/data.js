@@ -64,4 +64,4 @@ export const socialLinks = [
 ];
 
 export const resumeLink =
-  "https://drive.google.com/file/d/1BpCOPf0rO6hIsBeOQtEbIcPQhH4h_UJK/view?usp=sharing";
+  "https://drive.google.com/file/d/1eAOJMsFaPEkk5FbOoLWIhujbpwZohO1B/view?usp=drive_link";
