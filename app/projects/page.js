@@ -3,6 +3,8 @@ import { getProjects } from "../lib/dataFetches";
 import ProjectCard from "../ui/ProjectCard";
 import WarningAlert from "../ui/WarningAlert";
 
+export const revalidate = 3600;
+
 const page = async () => {
   const projects = await getProjects();
   if (projects.length === 0) {
