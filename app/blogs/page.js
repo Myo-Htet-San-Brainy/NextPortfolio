@@ -2,6 +2,8 @@ import React from "react";
 import { getBlogs } from "../lib/dataFetches";
 import BlogCard from "../ui/BlogCard";
 
+export const revalidate = 3600;
+
 const page = async () => {
   const blogs = await getBlogs();
   if (blogs.length === 0) {
