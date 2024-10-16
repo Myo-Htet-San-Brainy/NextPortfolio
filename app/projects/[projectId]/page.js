@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import GradientText from "../../ui/OgBlueGradientText";
 import { getProject } from "../../lib/dataFetches";
 import Breadcrumb from "../../ui/Breadcrumb";
-import { projectDetailsPageBreadcrumbs } from "../../lib/data.js";
+import { projectDetailsPageBreadcrumbs } from "../../lib/data.jsx";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 

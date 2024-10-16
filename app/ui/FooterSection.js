@@ -1,5 +1,5 @@
 import React from "react";
-import { socialLinks } from "../lib/data.js";
+import { socialLinks } from "../lib/data.jsx";
 import Link from "next/link";
 
 const FooterSection = () => {

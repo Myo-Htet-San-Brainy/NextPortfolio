@@ -1,6 +1,7 @@
 import React from "react";
 import { getProjects } from "../lib/dataFetches";
 import ProjectCard from "../ui/ProjectCard";
+import WarningAlert from "../ui/WarningAlert";
 
 const page = async () => {
   const projects = await getProjects();
@@ -15,10 +16,17 @@ const page = async () => {
   }
   return (
     <main>
-      <div className="w-[80%] max-w-screen-xl mx-auto py-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3 ">
-        {projects.map((project) => {
-          return <ProjectCard key={project._id} {...project} />;
-        })}
+      <div className="w-[80%] max-w-screen-xl mx-auto py-12">
+        <WarningAlert
+          warningText={
+            "Some of the projects may take a while to spin up because their APIs are hosted on free platform."
+          }
+        />
+        <div className=" mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3 ">
+          {projects.map((project) => {
+            return <ProjectCard key={project._id} {...project} />;
+          })}
+        </div>
       </div>
     </main>
   );
