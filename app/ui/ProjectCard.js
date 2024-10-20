@@ -8,7 +8,7 @@ const ProjectCard = ({ _id, img, name, text, gitHubLink, siteUrl }) => {
   return (
     <div className="card w-full bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 bg-orange-400">
       <figure>
-        <Image src={img} alt={name} width={500} height={500} />
+        <Image src={img} alt={name} width={1920} height={872} />
       </figure>
       <div className="card-body text-white">
         <div className=" flex justify-between text-2xl">

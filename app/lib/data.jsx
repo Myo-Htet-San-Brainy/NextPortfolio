@@ -64,7 +64,7 @@ export const socialLinks = [
 ];
 
 export const resumeLink =
-  "https://drive.google.com/file/d/1eAOJMsFaPEkk5FbOoLWIhujbpwZohO1B/view?usp=drive_link";
+  "https://drive.google.com/file/d/1nSe3Fj48pOMlY3hQD3xbvibw26bLDCqV/view?usp=drive_link";
 
 export const warningIconSVG = (
   <svg
