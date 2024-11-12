@@ -1,29 +1,25 @@
 import dbConnect from "./connectDb";
 import mongoose from "mongoose";
 
-export const getBlogs = async () => {
-  try {
-    const conn = await dbConnect();
-    const blogs = conn.connection.db.collection("blogs");
-    const documents = await blogs.find().toArray();
-    return documents;
-  } catch (error) {
-    throw new Error("Something went wrong when fetching blogs");
-  }
-};
+// export const getBlogs = async () => {
+//   try {
+//   } catch (error) {
+//     throw new Error("Something went wrong when fetching blogs");
+//   }
+// };
 
-export const getBlog = async (blogId) => {
-  try {
-    const conn = await dbConnect();
-    const blogs = conn.connection.db.collection("blogs");
-    const blog = await blogs.findOne({
-      _id: mongoose.Types.ObjectId.createFromHexString(blogId),
-    });
-    return blog;
-  } catch (error) {
-    throw new Error("Something went wrong when fetching a blog");
-  }
-};
+// export const getBlog = async (blogId) => {
+//   try {
+//     const conn = await dbConnect();
+//     const blogs = conn.connection.db.collection("blogs");
+//     const blog = await blogs.findOne({
+//       _id: mongoose.Types.ObjectId.createFromHexString(blogId),
+//     });
+//     return blog;
+//   } catch (error) {
+//     throw new Error("Something went wrong when fetching a blog");
+//   }
+// };
 
 export const getProjects = async () => {
   try {

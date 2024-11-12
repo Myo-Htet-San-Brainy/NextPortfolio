@@ -1,11 +1,24 @@
 import React from "react";
-import { getBlogs } from "../lib/dataFetches";
 import BlogCard from "../ui/BlogCard";
+import { getNamesOfMdFiles, getMarkdownContent } from "../lib/utils/markdown";
 
 export const revalidate = 3600;
 
 const page = async () => {
-  const blogs = await getBlogs();
+  //retrieving blogs data
+  const blogFilenames = getNamesOfMdFiles();
+  const blogs = blogFilenames.map((blogFilename) => {
+    const { frontmatter } = getMarkdownContent(blogFilename);
+    const { title, img, readTime, createdAt } = frontmatter;
+    return {
+      _id: blogFilename.replace(".md", ""),
+      title,
+      img,
+      readTime,
+      createdAt,
+    };
+  });
+
   if (blogs.length === 0) {
     return (
       <main className="py-40">

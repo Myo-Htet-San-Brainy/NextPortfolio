@@ -1,25 +1,26 @@
 import React from "react";
-import { getBlog } from "../../lib/dataFetches";
+
 import GradientText from "../../ui/OgBlueGradientText";
 import BreadCrumb from "../../ui/Breadcrumb";
 import { blogDetailsPageBreadcrumbs } from "../../lib/data.jsx";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { getMarkdownContent } from "../../lib/utils/markdown";
+import { getMonthDiff } from "../../lib/utils/monthDiff";
+import Markdown from "react-markdown";
 
 const page = async ({ params }) => {
-  const blog = await getBlog(params.blogId);
+  const blogId = params.blogId;
+  const { frontmatter, content } = getMarkdownContent(blogId);
 
-  if (!blog) {
-    notFound();
-  }
-  const { name, text, img, readTime, monthsAgo } = blog;
-
+  const { title, img, readTime, createdAt } = frontmatter;
+  const monthsAgo = getMonthDiff(createdAt);
   return (
     <div className=" py-12">
       <div className="w-4/5 mx-auto max-w-screen-md">
         <BreadCrumb breadcrumbs={blogDetailsPageBreadcrumbs} />
         <div className="mt-8 text-3xl">
-          <GradientText text={name} />
+          <GradientText text={title} />
         </div>
         <div className="mt-8 font-bold  capitalize text-base-content">
           <p>{readTime}</p>
@@ -29,13 +30,13 @@ const page = async ({ params }) => {
         </div>
         <Image
           src={img}
-          alt={name}
+          alt={title}
           className="mt-8 rounded-lg"
           height={300}
           width={300}
         />
         <p className="mt-8 text-base-content font-light text-lg tracking-wide">
-          {text}
+          <Markdown>{content}</Markdown>
         </p>
       </div>
     </div>
